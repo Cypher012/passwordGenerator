@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1bbd19;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 65%;
+  height: auto;
+  background-color: #1c1b1b;
+  box-shadow: 6px 8px 20px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 8rem;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  word-spacing: 10px;
+  margin-bottom: 1rem;
+}
+
+#input-container {
+  border-bottom: 2px dotted;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+#input-container input {
+  padding: 7px 10px;
+  font-size: 1.1rem;
+  background-color: #1c1b1b;
+  color: aliceblue;
+  outline: none;
+  width: 100%;
+  border: 1px solid;
+}
+
+#input-container #copied {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#input-container #copied:focus {
+  outline: none;
+}
+
+#input-container #checked {
+  position: absolute;
+  right: 20px;
+  display: none;
+  top: 10px;
+  cursor: pointer;
+  color: #10e425;
+}
+
+#menu {
+  border: 1px solid;
+  padding: 1.5rem;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#password-menu-heading {
+  margin: 2rem 0;
+}
+
+#password-menu li {
+  list-style: none;
+  margin-block-start: 15px;
+}
+
+#password-menu li input[type="checkbox"] {
+  margin-right: 7px;
+  accent-color: #10e425;
+}
+
+.length-container {
+  margin-block: 1rem;
+  display: flex;
+}
+
+.length-container label {
+  flex: 5;
+}
+
+#length {
+  width: 4rem;
+  background-color: #1c1b1b;
+  color: aliceblue;
+  font-size: 1.2rem;
+  padding: 7px 18px;
+  outline: none;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* Other browsers */
+  width: 100%;
+  height: 10px;
+  background-color: #10e425;
+  outline: none;
+  border-radius: 5px;
+}
+
+#password-menu button {
+  margin-top: 1.3rem;
+  border: none;
+  padding: 7px 30px;
+  background-color: #1cd62f;
+  font-size: 1.05rem;
+  color: #1c1b1b;
+}
+
+#courtesy {
+  margin-top: 1rem;
+  text-align: center;
+  word-spacing: 10px;
+}
+
+#courtesy span {
+  color: #10e425;
+}
+
+@media screen and (max-width: 995px){
+
+  .container{
+    width: 80%
+  }
+}
+
+@media screen and (max-width: 775px) {
+  body {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    align-items: flex-start;
+    height: auto;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+    height: auto;
+    box-shadow: 6px 8px 20px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+  .container h2 {
+    font-size: 1.35rem;
+    word-spacing: 2px;
+    margin-bottom: 3rem;
+  }
+
+  #input-container input {
+    padding: 7px 10px;
+    font-size: 1rem;
+    color: aliceblue;
+    outline: none;
+    width: 100%;
+    border: 1px solid;
+  }
+
+  #courtesy {
+    margin-block: 2rem;
+    text-align: center;
+    word-spacing: 10px;
+  }
+  #password-menu button {
+    margin-top: 2rem;
+    border: none;
+    padding: 12px 35px;
+    background-color: #1cd62f;
+    font-size: 1.05rem;
+  }
+
+  #checkbox-menu {
+    margin-block-end: 1.5rem;
+  }
+
+  #password-menu li {
+    list-style: none;
+    margin-block-start: 20px;
+  }
+}

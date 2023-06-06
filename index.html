@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Password Generator</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2> > Generate a secure password</h2>
+    <div id="input-container">
+      <input type="text" id="password" placeholder="Password">
+      <span>
+        <i id="copied" class="fa-regular fa-copy"></i>
+        <i id="checked" class="fa-solid fa-check"></i>
+      </span>
+
+    </div>
+
+    <h3 id="password-menu-heading">Customize your password</h3>
+
+    <form id="password-menu">
+      <div id="menu">
+        <ul id="checkbox-menu">
+          <li>
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">Uppercase</label>
+          </li>
+          <li>
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">Lowercase</label>
+          </li>
+          <li>
+            <input type="checkbox" id="numeric">
+            <label for="numeric">Numbers</label>
+          </li>
+          <li>
+            <input type="checkbox" id="symbols">
+            <label for="symbols">Symbols</label>
+          </li>
+        </ul>
+
+        <div id="password-length">
+
+          <div class="length-container">
+            <label for="length">password<br>Length :</label>
+            <input type="text" autocomplete="off" maxlength="2" id="length">
+          </div>
+          <input type="range" id="range" max="20" min="0">
+        </div>
+      </div>
+
+      <button id="submit">Generate</button>
+    </form>
+
+    <span id="courtesy">Made with ❤️ by <span> Blaqcipher</span></span>
+
+</body>
+<script src="./app.js"></script>
+
+</html>
