@@ -1,8 +1,10 @@
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const btn = document.querySelector("#submit");
 const range = document.getElementById("range");
-const passwrdLength = document.querySelector("#length");
+const passwrdLength = document.querySelector("#length")
 const password = document.querySelector("#password");
+password.readOnly = true;
+
 const frame = document.querySelector("#input-container span");
 
 const btnCopy = document.querySelector("#input-container #copied");
@@ -27,6 +29,8 @@ passwrdLength.addEventListener("keyup", () => {
 passwrdLength.addEventListener("input", () => {
   value = passwrdLength.value;
 });
+
+
 
 const charSets = [
   "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -75,15 +79,18 @@ btn.addEventListener("click", function (e) {
   e.preventDefault();
   const newArr = arr.join("");
 
-  const generatePassword = (length) => {
+  const generatePassword = (length = 10) => {
     let randomText = "";
 
-    if (length <= 20 && /\d+/.test(length)) {
+    if (newArr === "") {
+      return randomText;
+    }
+    else if (length <= 20 && /\d+/.test(length)) {
       for (let i = 0; i < length; i++) {
         const randomChar = newArr[Math.floor(Math.random() * newArr.length)];
         randomText += randomChar;
       }
-
+  
       return randomText;
     } else {
       return randomText;
